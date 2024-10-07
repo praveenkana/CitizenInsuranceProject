@@ -1,5 +1,6 @@
 package com.nt.entity;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,18 +11,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="DC_CASE_ENTITY")
-public class DCCaseEntity {
-	
+public class DC_EducationEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer educationId;
 	private Integer caseNo;
-	private Integer appId;
-	private Integer planId;
+	private String highestQualification;
+	private Integer passoutYear;
 	
-	
-
 }
